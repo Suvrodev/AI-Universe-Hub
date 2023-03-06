@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ai-Universe-hub</title>
+
+    <!-- ICON Link Start -->
+    <link rel="shortcut icon" href="MyAssets/ICO/My_Icon.ico" type="image/x-icon">
+    <!-- ICON Link Start -->
+
+    <!-- Google Font Link start -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet">
+    <!-- Google Font Link End -->
+
+    <!-- Bootstrap Link start -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <!-- Bootstrap Link End -->
+
+    <!-- Bootstrap ICON CDN Start -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <!-- Bootstrap ICON CDN End -->
+
+    <!-- CSS Link Start -->
+    <link rel="stylesheet" href="Style/indexStyle.css">
+    <!-- CSS Link End -->
+</head>
+<body>
+
+
+    <!-- Header Start -->
+    <header class="header d-flex flex-column align-items-center">
+        <h1 class="text-center fw-bolder mt-2">All Universe Hub</h1>
+        <button class="btn btn-primary" id="sortdata">Sort By Date</button>
+    </header>
+    <!-- Header End -->
+
+    <!-- Modal design Start -->
+    <!-- <div class="Modal">
+        <div class="LeftBox">
+            <div class="box">
+                <h5 class="item_desc fw-bolder mb-3">ChatGPT is an AI-powered chatbot platform that uses OpenAI's GPT technology to simulate human conversation.</h5>
+                <div class="Midcontent">
+                    <div class="box1 box_size">
+                        $10/ <br> month <br> Basic
+                    </div>
+                    <div class="box2 box_size">
+                        $50/ <br> month <br> Pro
+                    </div>
+                    <div class="box3 box_size">
+                       Contact <br> Us <br> Enterprice
+                    </div>
+                </div>
+                <div class="footercontent">
+                    <div class="Left_Feature">
+                        <h1>Feature</h1>
+                        <ul>
+                            <li>Customizable responses</li>
+                            <li>Multilingual support</li>
+                            <li>Seamless integration</li>
+                        </ul>
+                    </div>
+                    <div class="Right_Integration">
+                        <h1>Feature</h1>
+                        <ul>
+                            <li>Fb Messenger</li>
+                            <li>Slack</li>
+                            <li>Telegram</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="RightBox p-4">
+            <p class="image_Accuracy">94% Accuracy</p>
+            <img class="image" src="MyAssets/MyImage/Me-1.jpg" alt="">
+            <h4  class="focustcustomer mt-4 fw-bolder">Hi, how are you doing today?</h4>
+            <p class="text-center">I'm doing well, thank you for asking. How can I assist you today?</p>
+
+        </div>
+    </div> -->
+    <!-- Modal design End -->
+
+
+
+
+
+    <!-- Main Start -->
+    <main class="main">
+        <!-- Spinner section start -->
+        <section class="loading" id="spinnerid">
+            <div class="spinner-border text-success dataspinner" role="status">
+                <span class="visually-hidden">Loading...</span>
+              </div>
+        </section>
+        <!-- Spinner section end -->
+
+        <!-- card Section start -->
+        <section class="card_container container mt-4">
+            <div class="row row-cols-1 row-cols-md-3 g-4" id="cardcontainer" >
+                <!-- <div class="col">
+                  <div class="card p-1">
+                    <img src="MyAssets/MyImage/Me-1.jpg" class="card-img-top " alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title fw-bolder">Features</h5>
+                      <p class="card-text">
+                        <ol>
+                            <li>Natural language processing</li>
+                            <li>Contextual understanding</li>
+                            <li>Text generation</li>
+                        </ol>
+                      </p>
+                      <hr>
+                      <div class="CardFooter d-flex justify-content-between">
+                        <div class="LeftSide">
+                            <h6 class="fw-bold">CHATGPT</h6>
+                            <div class="Date d-flex ">
+                                <i class="bi bi-calendar2-week-fill"></i>
+                                <p class="mx-2">11/01/2022</p>
+                            </div>
+                        </div>
+                        <div class="RightSide d-flex align-items-center">
+                            <button class="arrow_btn"><i class="bi bi-arrow-right"></i></button>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div> -->
+              </div>
+
+              <!-- Load More Button Start -->
+              <div class="LoadMore">
+                <button class="btn btn-primary mt-2" id="loadmorebutton">See More</button>
+              </div>
+              <!-- Load More Button End -->
+        </section>
+        <!-- card Section End -->
+
+        <!-- Modal Section Start -->
+  <!-- Modal -->
+        <div class="modal fade " id="AIModal" tabindex="-1" aria-labelledby="AIModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-fullscreen-sm-down modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h1 class="modal-title fs-5" id="AIModalLabel">Modal title</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <!-- Modal design according to requirement Start -->
+                    <div class="Modal">
+                        <div class="LeftBox">
+                            <div class="box">
+                                <h5 class="item_desc fw-bolder mb-3" id="modaldesc"></h5>
+                                <div class="Midcontent">
+                                    <div class="box1 box_size">
+                                        <span id="price_1"></span> <span id="plane_1"></span>
+                                    </div>
+                                    <div class="box2 box_size">
+                                        <span id="price_2"></span> <span id="plan_2"></span>
+                                    </div>
+                                    <div class="box3 box_size">
+                                        <span id="contact"></span> <span id="enterprise"></span>
+                                    </div>
+                                </div>
+                                <div class="footercontent">
+                                    <div class="Left_Feature">
+                                        <h5 class="fw-bolder"></h5>
+                                        <ul>
+                                            <li id="feature_1"></li>
+                                            <li id="feature_2"></li>
+                                            <li id="feature_3"></li>
+                                        </ul>
+                                    </div>
+                                    <div class="Right_Integration">
+                                        <h5 class="fw-bolder"></h5>
+                                        <ul>
+                                            <li id="integration_1"></li>
+                                            <li id="integration_2"></li>
+                                            <li id="integration_3"></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="RightBox p-4">
+                            <p class="image_Accuracy" id="accuracubox"> <span id="accuracy"></span> % Accuracy</p>
+                            <img class="image " id="imgid" src="MyAssets/MyImage/Me-1.jpg" alt="">
+                            <h4  class="focustcustomer mt-4 fw-bolder" id="input"></h4>
+                            <p class="text-center" id="output"></p>
+
+                        </div>
+                    </div>
+                    <!-- Modal design according to requirement End -->
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+            </div>
+        </div>
+        <!-- Modal Section End -->
+       
+    </main>
+    <!-- Main End -->
+    
+    
+
+    <!-- Bootstrap JS Link Start -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS Link End -->
+
+    <!-- index JS Link Start -->
+    <script src="JS/indexDev.js"></script>
+    <!-- index JS Link End -->
+</body>
+</html>
